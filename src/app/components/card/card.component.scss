@@ -1,0 +1,39 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid #626161;
+    border-radius: 50px;
+    margin: 4rem;
+    padding: 0.6rem;
+    background-color: rgb(147, 176, 177);
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.airports{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+.fromAirport{
+    display: flex;
+    flex-direction: column;
+}
+.toAirport{
+    display: flex;
+    flex-direction: column;
+}
+p{
+    margin: 0;
+    font-weight: 800;
+    span{
+        font-weight: 400;
+    }
+}
+.duration, .price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

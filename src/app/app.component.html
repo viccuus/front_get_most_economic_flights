@@ -1,0 +1,27 @@
+<main class="main">
+  <div class="content">
+    <form (ngSubmit)="onSubmit()" #flightForm="ngForm" class="form">
+      <div class="form-group">
+        <label>Origen</label>
+        <input type="text" class="form-control" id="placeFrom" name="placeFrom" required [(ngModel)]="placeFrom">
+      </div>
+      <div class="form-group">
+        <label>Destino</label>
+        <input type="text" class="form-control" id="placeTo" name="placeTo" required [(ngModel)]="placeTo">
+      </div>
+      <div class="form-group">
+        <label>Desde</label>
+        <input type="date" class="form-control" id="dateFrom" name="dateFrom" required [(ngModel)]="dateFrom">
+      </div>
+      <div class="form-group">
+        <label>Hasta</label>
+        <input type="date" class="form-control" id="dateTo" name="dateTo" required [(ngModel)]="dateTo">
+      </div>
+      <button type = "submit" class = "btn" [disabled] = "!flightForm.form.valid || submitted">Buscar</button>
+    </form>
+    <app-weather [weathers] = "weathers"></app-weather>
+    <app-card [flights] = "flights"></app-card>
+  </div>
+</main>
+
+<router-outlet></router-outlet>

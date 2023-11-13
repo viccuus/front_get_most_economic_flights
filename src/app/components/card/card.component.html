@@ -1,0 +1,18 @@
+<div *ngFor="let flight of flights">
+    <div class="card">
+        <h2 class="title">{{ flight.airline }}</h2>
+        <div class="airports">
+            <div class="fromAirport">
+                <p>Origen:</p>
+                <span>{{flight.placeFrom}}</span>
+            </div>
+            <div class="toAirport">
+                <p>Destino:</p>
+                <span>{{flight.placeTo}}</span>
+            </div>
+            <p class="duration">Duración:<span>{{flight.flightDuration}}</span></p>
+            <p class="price">Precio:<span>{{flight.price}}</span></p>
+        </div>
+
+    </div>
+</div>

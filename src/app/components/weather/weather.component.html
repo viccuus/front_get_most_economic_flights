@@ -1,0 +1,8 @@
+<div class = "weathers" *ngIf = "weathers.length > 0">
+    <div class = "weatherDay" *ngFor = "let weather of weathers">
+        <p class = "weatherDate"><span>{{weather.dt | date:'dd/MM/yyyy'}}</span></p>
+        <p class = "weatherTemp">Temperatura:<span>{{weather.temp}} ºC</span></p>
+        <p class = "weatherDesc"><span>{{weather.description}}</span></p>
+        <p class = "weatherHumidity">Humedad:<span>{{weather.humidity}}</span></p>
+    </div>
+</div>
